@@ -39,6 +39,5 @@ int _printf(const char *format, ...)
 		}
 		len++;
 	}
-	my_putchar('\n');
 	return (len);
 }
