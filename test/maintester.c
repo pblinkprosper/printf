@@ -27,13 +27,13 @@ int main(void)
 	a = 2;
 	b = 5;
 	sum = a + b;
-	_printf("%i", sum);
-	_printf("---------------");
+	_printf("%i\n", sum);
+	_printf("---------------\n");
 
 	a = - 6;
 	b = 5;
 	sum = a + b;
-	 _printf("%i", sum);
+	 _printf("%i\n", sum);
 
 	return (0);
 }
