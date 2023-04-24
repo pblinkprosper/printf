@@ -35,6 +35,16 @@ int _printf(const char *format, ...)
 				_printint(va_arg(arg, int));
 				i++;
 			}
+			else if (format[i + 1] == 'b')
+			{
+				_printbinary(va_arg(arg, unsigned int));
+				i++;
+			}
+			else if (format[i + 1] == 'u')
+			{
+				_unsignedint(va_arg(arg, unsigned int));
+				i++;
+			}
 			len++;
 		}
 		else
