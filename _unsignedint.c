@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _printuint - prints unsigned integers
+ * _unsignedint - prints unsigned integers
  * @n: input integer
  *
  * Return: integer

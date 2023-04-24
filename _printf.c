@@ -2,7 +2,6 @@
 /**
  * _printf - prints input to the screen
  * @format: the character string
- *
  * Return: returns an integer
  */
 int _printf(const char *format, ...)

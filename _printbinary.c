@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * _printint - prints integers in binary
+ * _printbinary - prints integers in binary
  * @n: input integer
  *
  * Return: integer
