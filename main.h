@@ -4,11 +4,23 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
+/**
+ * struct formats - a struct data type for checker
+ * @sym: the pointer to string of symbols
+ * @f: the input function
+ */
+typedef struct formats
+{
+	char *sym;
+	int (*f)(va_list);
+} check_t;
+
 int _printf(const char *format, ...);
 int my_putchar(char c);
-int _puts(char *str);
-int _printint(int n);
-unsigned int _printbinary(unsigned int n);
-unsigned int _unsignedint(unsigned int n);
+int _putchar(va_list args);
+int _puts(va_list args);
+int _printint(va_list args);
+int _printpercent(__attribute__((unused))va_list args);
+int checker(const char *format, va_list args);
 
 #endif
