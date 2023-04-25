@@ -10,14 +10,8 @@
 int checker(const char *format, va_list args)
 {
 	int i, j, symbs, len;
-	check_t s_symbs[] = {
-		{"c", _putchar},
-		{"s", _puts},
-		{"d", _printint},
-		{"i", _printint},
-		{"%", _printpercent},
-		{NULL, NULL}
-	};
+	check_t s_symbs[] = {{"c", _putchar}, {"s", _puts}, {"d", _printint},
+		{"i", _printint}, {"%", _printpercent}, {NULL, NULL}};
 
 	symbs = 0;
 	for (i = 0; format[i]; i++)
