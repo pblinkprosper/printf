@@ -25,10 +25,7 @@ int _puts(va_list args)
 	char *str;
 
 	str = va_arg(args, char *);
-	if (str == NULL)
-	{
-		return (-1);
-	}
+
 	for (a = 0; str[a]; a++)
 	{
 		my_putchar(str[a]);
