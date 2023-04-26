@@ -89,3 +89,29 @@ int _printint(va_list args)
 	}
 	return (i);
 }
+
+/**
+ * _printbinary - prints integers in binary
+ * @args: arguments
+ *
+ * Return: integer
+ */
+
+int _printbinary(va_list args)
+{
+	int n, i;
+	int leadingZero = 1;
+
+	n = va_arg(args, int);
+	for (i = 31; i >= 0; i--)
+	{
+		if (n & (1 << i))
+		{
+			my_putchar('0' + 1);
+			leadingZero = 0;
+		}
+		else if (!leadingZero)
+			my_putchar('0' + 0);
+	}
+	return (n);
+}
