@@ -103,6 +103,8 @@ int _printbinary(va_list args)
 	int leadingZero = 1;
 
 	n = va_arg(args, int);
+	if (n == NULL)
+		return (NUll);
 	for (i = 31; i >= 0; i--)
 	{
 		if (n & (1 << i))
