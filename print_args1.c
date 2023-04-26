@@ -108,7 +108,7 @@ int _printbinary(va_list args)
 		my_putchar('0' + 0);
 		return (0);
 	}
-	else if (n < 0)
+	if (n < 0)
 		return (-1);
 
 	for (i = 31; i >= 0; i--)
