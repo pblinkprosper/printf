@@ -22,7 +22,7 @@ int checker(const char *format, va_list args)
 				len = func(args);
 				if (len == -1)
 					return (-1);
-				symbs+= len;
+				symbs += len;
 				i++;
 			}
 			else if (format[i + 1] && format[i + 1] != ' ')
@@ -47,6 +47,12 @@ int checker(const char *format, va_list args)
 	return (symbs);
 }
 
+/**
+ * get_format - gets a functions based on the read format
+ * @format: the string containing the arguments
+ * Return: function
+ */
+
 int (*get_format(const char *format))(va_list)
 {
 	int k;
@@ -55,11 +61,14 @@ int (*get_format(const char *format))(va_list)
 		"c", _putchar},
 		{"s", _puts},
 		{"d", _printint},
-                {"i", _printint}, {"%", _printpercent}, {NULL, NULL}};
+		{"i", _printint},
+		{"%", _printpercent},
+		{NULL, NULL}
+	};
 
 	for (k = 0; s_symbs[k].sym; k++)
 	{
-		if (s_symbs[k].sym[0] == format[0]) 
+		if (s_symbs[k].sym[0] == format[0])
 		{
 			return (s_symbs[k].f);
 		}
