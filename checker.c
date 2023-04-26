@@ -39,8 +39,8 @@ int checker(const char *format, va_list args)
 				}
 				else
 					return (-1);
-				i++;
 			}
+			i += 1;
 		}
 		else
 		{
