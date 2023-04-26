@@ -34,8 +34,6 @@ int checker(const char *format, va_list args)
 					symbs = symbs + 2;
 					i++;
 				}
-				else
-					return (-1);
 			}
 		}
 		else
