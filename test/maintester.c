@@ -31,7 +31,7 @@ int main(void)
 	_printf("---------------\n");
 
 	a = - 6;
-	b = 5;
+	b = 10;
 	sum = a + b;
 	 _printf("%i\n", sum);
 
