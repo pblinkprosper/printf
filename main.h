@@ -4,6 +4,8 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
+#define BUFFER 1024
+
 /**
  * struct formats - a struct data type for checker
  * @sym: the pointer to string of symbols
