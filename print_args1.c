@@ -92,7 +92,7 @@ int _printint(va_list args)
 
 /**
  * _printbinary - prints integers in binary
- * @n: input integer
+ * @args: arguments
  *
  * Return: integer
  */
