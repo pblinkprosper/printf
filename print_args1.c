@@ -27,7 +27,7 @@ int _puts(va_list args)
 	str = va_arg(args, char *);
 	if (str == NULL)
 	{
-		return (-1);
+		str = "(null)";
 	}
 	if (str)
 	{
