@@ -92,34 +92,36 @@ int _printint(va_list args)
 
 /**
  * _printbinary - prints integers in binary
- * @args: arguments
+ * @n: input integer
  *
  * Return: integer
  */
 
 int _printbinary(va_list args)
 {
-	int n, i;
-	int leadingZero = 1;
+	unsigned int n, i, b;
+	unsigned int bits[32];
+
 
 	n = va_arg(args, int);
-	if (n == 0)
-	{
-		my_putchar('0' + 0);
-		return (0);
-	}
-	if (n < 0)
-		return (-1);
 
-	for (i = 31; i >= 0; i--)
+	i = 0;
+	b = 0;
+	if (n < 1)
 	{
-		if (n & (1 << i))
-		{
-			my_putchar('0' + 1);
-			leadingZero = 0;
-		}
-		else if (!leadingZero)
-			my_putchar('0' + 0);
+		my_putchar('0');
+		i++;
+		return (i);
 	}
-	return (n);
+	while (n > 0)
+	{
+		bits[i] = n % 2;
+		n /= 2;
+		i++;
+	}
+	for (b = i - 1; b > 0; b--)
+		my_putchar('0' + bits[b]);
+
+	my_putchar('0' + bits[b]);
+	return (i);
 }
